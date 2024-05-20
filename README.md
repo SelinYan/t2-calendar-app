@@ -7,6 +7,7 @@ Using this app, users can customize their digital advent calendar by adding thei
 ## Live Demo
 
 [Live demo](https://digital-calendar-wen.netlify.app/)
+https://digital-calendar-wen.netlify.app/
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1f29cbc0-98b8-49bf-816f-aa41ce88fb15/deploy-status?branch=main)](https://app.netlify.com/sites/digital-calendar-wen/deploys)
 
