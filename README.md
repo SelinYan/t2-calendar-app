@@ -4,6 +4,11 @@ Welcome to the Advent Calendar App! This app is designed to help users countdown
 
 Using this app, users can customize their digital advent calendar by adding their images, videos and more.
 
+Live demo:
+https://digital-advent-calendar-wen.netlify.app
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2a93831-8665-4b74-a3d0-5a44c106a16a/deploy-status)](https://app.netlify.com/sites/digital-advent-calendar-wen/deploys/deploy-status?branch=main)
+
 ## Technologies used
 
 Built with:
