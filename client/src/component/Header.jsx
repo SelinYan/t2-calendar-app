@@ -16,6 +16,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useLocation } from "react-router-dom";
+import avatarImage from "../assets/avatar.png";
 
 /* const pages = ["Instruction", "Pricing"]; */
 const settings = ["Register", "Log in"];
@@ -78,8 +79,7 @@ function Header() {
         backgroundColor: "#fff",
         boxShadow: "none",
         borderBottom: "2px solid #9AC8E8",
-      }}
-    >
+      }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Link
@@ -88,8 +88,7 @@ function Header() {
               display: "flex",
               flexDirection: "column",
               textDecoration: "none",
-            }}
-          >
+            }}>
             <Typography
               variant="h4"
               sx={{
@@ -100,8 +99,7 @@ function Header() {
                 justifyContent: "center",
                 color: "#476C92",
                 textDecoration: "none",
-              }}
-            >
+              }}>
               WIME
               <br />
             </Typography>
@@ -117,23 +115,21 @@ function Header() {
                 textDecoration: "none",
                 marginTop: "-10px",
                 textTransform: "uppercase",
-              }}
-            >
+              }}>
               calendar
             </Typography>
           </Link>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             {location.pathname !== "/user" && (
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="#00a8cd"
-            >
-              <MenuIcon />
-            </IconButton>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="#00a8cd">
+                <MenuIcon />
+              </IconButton>
             )}
             <Menu
               id="menu-appbar"
@@ -153,32 +149,29 @@ function Header() {
                 textDecoration: "none",
                 display: { xs: "block", md: "none" },
                 color: "#476C92",
-              }}
-            >
+              }}>
               {showTabs && (
-              <MenuItem
-                sx={{
-                  textDecoration: "none",
-                  color: "#476C92",
-                }}
-                onClick={() => {
-                  scrollToSection("instruction");
-                  handleCloseNavMenu();
-                }}
-              >
-                <Typography textAlign="center">Instruction</Typography>
-              </MenuItem>
+                <MenuItem
+                  sx={{
+                    textDecoration: "none",
+                    color: "#476C92",
+                  }}
+                  onClick={() => {
+                    scrollToSection("instruction");
+                    handleCloseNavMenu();
+                  }}>
+                  <Typography textAlign="center">Instruction</Typography>
+                </MenuItem>
               )}
               {showTabs && (
-              <MenuItem
-                sx={{ textDecoration: "none" }}
-                onClick={() => {
-                  scrollToSection("pricing");
-                  handleCloseNavMenu();
-                }}
-              >
-                <Typography textAlign="center">Pricing</Typography>
-              </MenuItem>
+                <MenuItem
+                  sx={{ textDecoration: "none" }}
+                  onClick={() => {
+                    scrollToSection("pricing");
+                    handleCloseNavMenu();
+                  }}>
+                  <Typography textAlign="center">Pricing</Typography>
+                </MenuItem>
               )}
             </Menu>
           </Box>
@@ -190,43 +183,38 @@ function Header() {
               display: { xs: "none", md: "flex" },
               mx: 5,
               gap: "30px",
-            }}
-          >
+            }}>
             {showTabs && (
-            <Link
-              onClick={() => scrollToSection("instruction")}
-              style={{
-                textDecoration: "none",
-              }}
-            >
-              <Typography
+              <Link
+                onClick={() => scrollToSection("instruction")}
                 style={{
-                  color: "#476C92",
-                  fontWeight: "bold",
-                  fontSize: "1.1rem",
-                }}
-              >
-                Instruction
-              </Typography>
-            </Link>
+                  textDecoration: "none",
+                }}>
+                <Typography
+                  style={{
+                    color: "#476C92",
+                    fontWeight: "bold",
+                    fontSize: "1.1rem",
+                  }}>
+                  Instruction
+                </Typography>
+              </Link>
             )}
             {showTabs && (
-            <Link
-              onClick={() => scrollToSection("pricing")}
-              style={{
-                textDecoration: "none",
-              }}
-            >
-              <Typography
+              <Link
+                onClick={() => scrollToSection("pricing")}
                 style={{
-                  color: "#476C92",
-                  fontWeight: "bold",
-                  fontSize: "1.1rem",
-                }}
-              >
-                Pricing
-              </Typography>
-            </Link>
+                  textDecoration: "none",
+                }}>
+                <Typography
+                  style={{
+                    color: "#476C92",
+                    fontWeight: "bold",
+                    fontSize: "1.1rem",
+                  }}>
+                  Pricing
+                </Typography>
+              </Link>
             )}
           </Box>
           <Box sx={{ p: 0, display: { xs: "none", md: "flex" } }}>
@@ -239,27 +227,23 @@ function Header() {
                     display: "flex",
                     alignItems: "center",
                     gap: "40px",
-                  }}
-                >
+                  }}>
                   <Box
                     sx={{
                       width: "80px",
-                    }}
-                  >
+                    }}>
                     {location.pathname !== "/user" && (
                       <Link
                         to="/user"
                         style={{
                           textDecoration: "none",
-                        }}
-                      >
+                        }}>
                         <Typography
                           style={{
                             color: "#476C92",
                             fontWeight: "bold",
                             fontSize: "1.1rem",
-                          }}
-                        >
+                          }}>
                           Calendars
                         </Typography>
                       </Link>
@@ -270,8 +254,7 @@ function Header() {
                       color: "#476C92",
                       fontWeight: "bold",
                       fontSize: "1.1rem",
-                    }}
-                  >
+                    }}>
                     {username && `Welcome, ${username}!`}
                   </Typography>
                 </Box>
@@ -295,8 +278,7 @@ function Header() {
                           boxShadow: "none",
                           border: "1px solid",
                         },
-                      }}
-                    >
+                      }}>
                       Log out
                     </Button>
                   </Link>
@@ -323,8 +305,7 @@ function Header() {
                           boxShadow: "none",
                           border: "1px solid",
                         },
-                      }}
-                    >
+                      }}>
                       Log in
                     </Button>
                   </Link>
@@ -351,8 +332,7 @@ function Header() {
                           boxShadow: "none",
                           border: "1px solid",
                         },
-                      }}
-                    >
+                      }}>
                       Register
                     </Button>
                   </Link>
@@ -365,9 +345,8 @@ function Header() {
             <Tooltip title="Open settings">
               <IconButton
                 onClick={handleOpenUserMenu}
-                sx={{ p: 0, display: { xs: "flex", md: "none" } }}
-              >
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                sx={{ p: 0, display: { xs: "flex", md: "none" } }}>
+                <Avatar alt="User Avatar" src={avatarImage} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -384,8 +363,7 @@ function Header() {
                 horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
+              onClose={handleCloseUserMenu}>
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
