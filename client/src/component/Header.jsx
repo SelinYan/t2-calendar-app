@@ -165,7 +165,7 @@ function Header() {
               )}
               {showTabs && (
                 <MenuItem
-                  sx={{ textDecoration: "none" }}
+                  sx={{ textDecoration: "none", color: "#476C92" }}
                   onClick={() => {
                     scrollToSection("pricing");
                     handleCloseNavMenu();
@@ -366,7 +366,13 @@ function Header() {
               onClose={handleCloseUserMenu}>
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <Typography
+                    textAlign="center"
+                    sx={{
+                      color: "#476C92",
+                    }}>
+                    {setting}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
